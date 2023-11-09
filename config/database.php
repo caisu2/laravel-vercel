@@ -65,17 +65,17 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'url' => env('DATABASE_URL', 'postgres://default:endpoint=ep-muddy-sun-83087392-pooler$W60GhNMQftFm@ep-muddy-sun-83087392-pooler.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb'),
+            'host' => env('DB_HOST', 'ep-muddy-sun-83087392-pooler.ap-southeast-1.postgres.vercel-storage.com'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'verceldb'),
+            'username' => env('DB_USERNAME', 'default'),
+            'password' => env('DB_PASSWORD', 'W60GhNMQftFm'),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
             'search_path' => 'public',
-            'sslmode' => 'prefer',
+            'sslmode' => 'require',
         ],
 
         'sqlsrv' => [
