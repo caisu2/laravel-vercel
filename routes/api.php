@@ -21,9 +21,9 @@ use Illuminate\Support\Facades\Route;
 // $router->put('/informations/update/{id}', 'InformationController@update');
 
 Route::get('/informations',[InformationController::class,'index']);
-Route::get('/informations/store',[InformationController::class,'store']);
-Route::get('/informations/destroy/{id}',[InformationController::class,'destroy']);
-Route::get('/informations/update/{id}',[InformationController::class,'update']);
+Route::post('/informations/store',[InformationController::class,'store']);
+Route::delete('/informations/destroy/{id}',[InformationController::class,'destroy']);
+Route::put('/informations/update/{id}',[InformationController::class,'update']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
